@@ -15,6 +15,7 @@ const User =require("../models/User.js") ;
       location,
       occupation,
     } = req.body;
+    print(req.body)
 
     const salt = await bcrypt.genSalt();
     const passwordHash = await bcrypt.hash(password, salt);

@@ -71,6 +71,7 @@ const Form = () => {
       }
     );
     const savedUser = await savedUserResponse.json();
+    console.log(savedUser)
     onSubmitProps.resetForm();
 
     if (savedUser) {
@@ -84,6 +85,7 @@ const Form = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     });
+    console.log(values)
     const loggedIn = await loggedInResponse.json();
     onSubmitProps.resetForm();
     if (loggedIn) {
